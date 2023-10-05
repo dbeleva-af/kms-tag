@@ -16,7 +16,7 @@ resource "aws_kms_key" "example" {
   tags = {
     Name = "1"
   }
-  policy      = policy = jsonencode({
+  policy = jsonencode({
     Id = "example"
     Statement = [
       {
