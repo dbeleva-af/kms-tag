@@ -1,4 +1,5 @@
 # A bucket policy allowing log delivery to this bucket:
+/*
 data "aws_iam_policy_document" "log_bucket" {
   statement {
     actions   = ["s3:PutObject"]
@@ -55,3 +56,4 @@ resource "aws_s3_bucket_policy" "logs" {
   bucket = aws_s3_bucket.logs.id
   policy = data.aws_iam_policy_document.log_bucket.json
 }
+*/
