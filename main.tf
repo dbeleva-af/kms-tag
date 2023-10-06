@@ -16,7 +16,7 @@ resource "aws_kms_key" "encryption_key" {
   deletion_window_in_days = 30
   enable_key_rotation     = true
   policy                  = data.aws_iam_policy_document.encryption_key_policy.json
-  tags                    = "1"
+  tags                    = "one"
 }
 
 data "aws_iam_policy_document" "encryption_key_policy" {
