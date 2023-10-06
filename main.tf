@@ -115,7 +115,7 @@ actions = [
   statement {
     sid = "LogForwardingRoleCanDecrypt"
     principals {
-      identifiers = [aws_iam_role.log_forwarding_role.arn]
+      #identifiers = [aws_iam_role.log_forwarding_role.arn]
       type        = "AWS"
     }
     actions   = ["kms:Decrypt"]
