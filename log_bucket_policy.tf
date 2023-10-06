@@ -2,7 +2,7 @@
 data "aws_iam_policy_document" "log_bucket" {
   statement {
     actions   = ["s3:PutObject"]
-    resources = ["${aws_s3_bucket.logs.arn}/AWSLogs/*"]
+    #resources = ["${aws_s3_bucket.logs.arn}/AWSLogs/*"]
 
     principals {
       type        = var.put_principal_type
@@ -12,7 +12,7 @@ data "aws_iam_policy_document" "log_bucket" {
 
   statement {
     actions   = ["s3:GetBucketAcl"]
-    resources = [aws_s3_bucket.logs.arn]
+    #resources = [aws_s3_bucket.logs.arn]
     principals {
       type        = "Service"
       identifiers = ["delivery.logs.amazonaws.com"]
@@ -28,8 +28,8 @@ data "aws_iam_policy_document" "log_bucket" {
     }
     actions = ["s3:*"]
     resources = [
-      aws_s3_bucket.logs.arn,
-      "${aws_s3_bucket.logs.arn}/*"
+      #aws_s3_bucket.logs.arn,
+      #"${aws_s3_bucket.logs.arn}/*"
     ]
 
     condition {
