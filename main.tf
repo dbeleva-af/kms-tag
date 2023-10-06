@@ -18,6 +18,7 @@ resource "aws_kms_key" "encryption_key" {
   policy                  = data.aws_iam_policy_document.encryption_key_policy.json
   tags                    = {
     Name = "One"
+  }
 }
 
 data "aws_iam_policy_document" "encryption_key_policy" {
