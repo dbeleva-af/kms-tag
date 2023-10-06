@@ -17,7 +17,7 @@ resource "aws_kms_key" "encryption_key" {
   enable_key_rotation     = true
   policy                  = data.aws_iam_policy_document.encryption_key_policy.json
   tags                    = {
-    Name = "One"
+    Name = "Two"
   }
 }
 
